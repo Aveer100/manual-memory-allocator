@@ -72,31 +72,63 @@ include CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/codegen:
 .PHONY : CMakeFiles/main.dir/codegen
 
-CMakeFiles/main.dir/src/test.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/test.c.o: /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/test.c
-CMakeFiles/main.dir/src/test.c.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/test.c.o -MF CMakeFiles/main.dir/src/test.c.o.d -o CMakeFiles/main.dir/src/test.c.o -c /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/test.c
+CMakeFiles/main.dir/src/helper.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/helper.c.o: /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/helper.c
+CMakeFiles/main.dir/src/helper.c.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/helper.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/helper.c.o -MF CMakeFiles/main.dir/src/helper.c.o.d -o CMakeFiles/main.dir/src/helper.c.o -c /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/helper.c
 
-CMakeFiles/main.dir/src/test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/src/test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/test.c > CMakeFiles/main.dir/src/test.c.i
+CMakeFiles/main.dir/src/helper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/src/helper.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/helper.c > CMakeFiles/main.dir/src/helper.c.i
 
-CMakeFiles/main.dir/src/test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/src/test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/test.c -o CMakeFiles/main.dir/src/test.c.s
+CMakeFiles/main.dir/src/helper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/src/helper.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/helper.c -o CMakeFiles/main.dir/src/helper.c.s
+
+CMakeFiles/main.dir/src/list.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/list.c.o: /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/list.c
+CMakeFiles/main.dir/src/list.c.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/list.c.o -MF CMakeFiles/main.dir/src/list.c.o.d -o CMakeFiles/main.dir/src/list.c.o -c /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/list.c
+
+CMakeFiles/main.dir/src/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/src/list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/list.c > CMakeFiles/main.dir/src/list.c.i
+
+CMakeFiles/main.dir/src/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/src/list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/list.c -o CMakeFiles/main.dir/src/list.c.s
+
+CMakeFiles/main.dir/src/main.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/main.c.o: /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/main.c
+CMakeFiles/main.dir/src/main.c.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.c.o -MF CMakeFiles/main.dir/src/main.c.o.d -o CMakeFiles/main.dir/src/main.c.o -c /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/main.c
+
+CMakeFiles/main.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/main.c > CMakeFiles/main.dir/src/main.c.i
+
+CMakeFiles/main.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/main.c -o CMakeFiles/main.dir/src/main.c.s
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/test.c.o"
+"CMakeFiles/main.dir/src/helper.c.o" \
+"CMakeFiles/main.dir/src/list.c.o" \
+"CMakeFiles/main.dir/src/main.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main: CMakeFiles/main.dir/src/test.c.o
+main: CMakeFiles/main.dir/src/helper.c.o
+main: CMakeFiles/main.dir/src/list.c.o
+main: CMakeFiles/main.dir/src/main.c.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

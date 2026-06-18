@@ -1,0 +1,2 @@
+
+int translate(int num);

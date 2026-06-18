@@ -129,29 +129,77 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/test.o: src/test.c.o
-.PHONY : src/test.o
+src/helper.o: src/helper.c.o
+.PHONY : src/helper.o
 
 # target to build an object file
-src/test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/test.c.o
-.PHONY : src/test.c.o
+src/helper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/helper.c.o
+.PHONY : src/helper.c.o
 
-src/test.i: src/test.c.i
-.PHONY : src/test.i
+src/helper.i: src/helper.c.i
+.PHONY : src/helper.i
 
 # target to preprocess a source file
-src/test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/test.c.i
-.PHONY : src/test.c.i
+src/helper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/helper.c.i
+.PHONY : src/helper.c.i
 
-src/test.s: src/test.c.s
-.PHONY : src/test.s
+src/helper.s: src/helper.c.s
+.PHONY : src/helper.s
 
 # target to generate assembly for a file
-src/test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/test.c.s
-.PHONY : src/test.c.s
+src/helper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/helper.c.s
+.PHONY : src/helper.c.s
+
+src/list.o: src/list.c.o
+.PHONY : src/list.o
+
+# target to build an object file
+src/list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/list.c.o
+.PHONY : src/list.c.o
+
+src/list.i: src/list.c.i
+.PHONY : src/list.i
+
+# target to preprocess a source file
+src/list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/list.c.i
+.PHONY : src/list.c.i
+
+src/list.s: src/list.c.s
+.PHONY : src/list.s
+
+# target to generate assembly for a file
+src/list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/list.c.s
+.PHONY : src/list.c.s
+
+src/main.o: src/main.c.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -162,9 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/helper.o"
+	@echo "... src/helper.i"
+	@echo "... src/helper.s"
+	@echo "... src/list.o"
+	@echo "... src/list.i"
+	@echo "... src/list.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

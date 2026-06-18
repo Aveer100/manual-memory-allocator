@@ -1,5 +1,5 @@
-CMakeFiles/main.dir/src/test.c.o: \
-  /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/test.c \
+CMakeFiles/main.dir/src/helper.c.o: \
+  /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/helper.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \

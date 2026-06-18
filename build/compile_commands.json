@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build",
-  "command": "/usr/bin/cc  -I/Users/aveerseikhon/memory-allocator/manual-memory-allocator/include  -arch arm64 -o CMakeFiles/main.dir/src/test.c.o -c /Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/test.c",
-  "file": "/Users/aveerseikhon/memory-allocator/manual-memory-allocator/src/test.c",
-  "output": "CMakeFiles/main.dir/src/test.c.o"
-}
-]

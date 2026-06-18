@@ -7,5 +7,6 @@ project(
 
 file(GLOB SOURCES "src/*.c")
 
+add_link_options(-fsanitize=undefined)
 add_executable(main ${SOURCES})
 include_directories(include)

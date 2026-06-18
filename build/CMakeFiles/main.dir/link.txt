@@ -1,1 +1,1 @@
-/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/main.dir/src/test.c.o -o main
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -fsanitize=undefined CMakeFiles/main.dir/src/helper.c.o CMakeFiles/main.dir/src/list.c.o CMakeFiles/main.dir/src/main.c.o -o main
