@@ -6,7 +6,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/aveerseikhon/memory-allocator/manual-memory-allocator/include
 
-C_FLAGSarm64 =  -arch arm64
+C_FLAGSarm64 =  -arch arm64 -fsanitize=address,undefined -g -fno-omit-frame-pointer
 
-C_FLAGS =  -arch arm64
+C_FLAGS =  -arch arm64 -fsanitize=address,undefined -g -fno-omit-frame-pointer
 

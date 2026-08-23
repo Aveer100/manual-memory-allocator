@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/aveerseikhon/memory-allocator/manual-memory-allocator/
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -117,89 +127,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named testCases
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+testCases: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testCases
+.PHONY : testCases
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+testCases/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/build
+.PHONY : testCases/fast
 
-src/helper.o: src/helper.c.o
-.PHONY : src/helper.o
-
-# target to build an object file
-src/helper.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/helper.c.o
-.PHONY : src/helper.c.o
-
-src/helper.i: src/helper.c.i
-.PHONY : src/helper.i
-
-# target to preprocess a source file
-src/helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/helper.c.i
-.PHONY : src/helper.c.i
-
-src/helper.s: src/helper.c.s
-.PHONY : src/helper.s
-
-# target to generate assembly for a file
-src/helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/helper.c.s
-.PHONY : src/helper.c.s
-
-src/list.o: src/list.c.o
-.PHONY : src/list.o
+src/allocator.o: src/allocator.c.o
+.PHONY : src/allocator.o
 
 # target to build an object file
-src/list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/list.c.o
-.PHONY : src/list.c.o
+src/allocator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/src/allocator.c.o
+.PHONY : src/allocator.c.o
 
-src/list.i: src/list.c.i
-.PHONY : src/list.i
+src/allocator.i: src/allocator.c.i
+.PHONY : src/allocator.i
 
 # target to preprocess a source file
-src/list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/list.c.i
-.PHONY : src/list.c.i
+src/allocator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/src/allocator.c.i
+.PHONY : src/allocator.c.i
 
-src/list.s: src/list.c.s
-.PHONY : src/list.s
+src/allocator.s: src/allocator.c.s
+.PHONY : src/allocator.s
 
 # target to generate assembly for a file
-src/list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/list.c.s
-.PHONY : src/list.c.s
+src/allocator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/src/allocator.c.s
+.PHONY : src/allocator.c.s
 
-src/main.o: src/main.c.o
-.PHONY : src/main.o
+src/allocator_helpers.o: src/allocator_helpers.c.o
+.PHONY : src/allocator_helpers.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.o
-.PHONY : src/main.c.o
+src/allocator_helpers.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/src/allocator_helpers.c.o
+.PHONY : src/allocator_helpers.c.o
 
-src/main.i: src/main.c.i
-.PHONY : src/main.i
+src/allocator_helpers.i: src/allocator_helpers.c.i
+.PHONY : src/allocator_helpers.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.i
-.PHONY : src/main.c.i
+src/allocator_helpers.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/src/allocator_helpers.c.i
+.PHONY : src/allocator_helpers.c.i
 
-src/main.s: src/main.c.s
-.PHONY : src/main.s
+src/allocator_helpers.s: src/allocator_helpers.c.s
+.PHONY : src/allocator_helpers.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
-.PHONY : src/main.c.s
+src/allocator_helpers.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/src/allocator_helpers.c.s
+.PHONY : src/allocator_helpers.c.s
+
+tests/allocator_test.o: tests/allocator_test.c.o
+.PHONY : tests/allocator_test.o
+
+# target to build an object file
+tests/allocator_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/tests/allocator_test.c.o
+.PHONY : tests/allocator_test.c.o
+
+tests/allocator_test.i: tests/allocator_test.c.i
+.PHONY : tests/allocator_test.i
+
+# target to preprocess a source file
+tests/allocator_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/tests/allocator_test.c.i
+.PHONY : tests/allocator_test.c.i
+
+tests/allocator_test.s: tests/allocator_test.c.s
+.PHONY : tests/allocator_test.s
+
+# target to generate assembly for a file
+tests/allocator_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/tests/allocator_test.c.s
+.PHONY : tests/allocator_test.c.s
 
 # Help Target
 help:
@@ -209,16 +219,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... src/helper.o"
-	@echo "... src/helper.i"
-	@echo "... src/helper.s"
-	@echo "... src/list.o"
-	@echo "... src/list.i"
-	@echo "... src/list.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... test"
+	@echo "... testCases"
+	@echo "... src/allocator.o"
+	@echo "... src/allocator.i"
+	@echo "... src/allocator.s"
+	@echo "... src/allocator_helpers.o"
+	@echo "... src/allocator_helpers.i"
+	@echo "... src/allocator_helpers.s"
+	@echo "... tests/allocator_test.o"
+	@echo "... tests/allocator_test.i"
+	@echo "... tests/allocator_test.s"
 .PHONY : help
 
 

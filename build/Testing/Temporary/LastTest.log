@@ -1,0 +1,39 @@
+Start testing: Aug 22 12:23 PDT
+----------------------------------------------------------
+1/1 Testing: AllocatorUnitTests
+1/1 Test: AllocatorUnitTests
+Command: "/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/testCases"
+Directory: /Users/aveerseikhon/memory-allocator/manual-memory-allocator/build
+"AllocatorUnitTests" start time: Aug 22 12:23 PDT
+Output:
+----------------------------------------------------------
+Test 1: Taboo Inputs
+Test Passed
+
+Test 2: Allocation with Read and Write
+Test Passed
+
+Test 3: Block Reuse
+Test Passed
+
+Test 4: First Fit, Best Fit, and Worst Fit Tests
+Test Passed
+
+Test 5: Forward Coalescing Test
+Test Passed
+
+Test 6: Small and Big Allocation Test
+Test Passed
+
+Test 7: Double Free Guard
+Test Passed
+
+<end of output>
+Test time =   0.60 sec
+----------------------------------------------------------
+Test Passed.
+"AllocatorUnitTests" end time: Aug 22 12:23 PDT
+"AllocatorUnitTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 22 12:23 PDT

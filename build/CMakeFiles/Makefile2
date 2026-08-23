@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/aveerseikhon/memory-allocator/manual-memory-allocator/
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/testCases.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/main.dir/codegen
+codegen: CMakeFiles/testCases.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/testCases.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/testCases.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=1,2,3,4 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/testCases.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=1,2,3,4 "Built target testCases"
+.PHONY : CMakeFiles/testCases.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
+CMakeFiles/testCases.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/testCases.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/testCases.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
+testCases: CMakeFiles/testCases.dir/rule
+.PHONY : testCases
 
 # codegen rule for target.
-CMakeFiles/main.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target main"
-.PHONY : CMakeFiles/main.dir/codegen
+CMakeFiles/testCases.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target testCases"
+.PHONY : CMakeFiles/testCases.dir/codegen
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/testCases.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testCases.dir/build.make CMakeFiles/testCases.dir/clean
+.PHONY : CMakeFiles/testCases.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

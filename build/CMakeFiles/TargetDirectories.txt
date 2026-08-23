@@ -1,3 +1,4 @@
-/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles/main.dir
+/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles/testCases.dir
+/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles/test.dir
 /Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles/edit_cache.dir
 /Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/CMakeFiles/rebuild_cache.dir
