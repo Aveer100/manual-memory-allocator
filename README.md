@@ -32,7 +32,7 @@ Free blocks are stored in 8 segregated free lists ranging from sizes:
 - 1025 - 2048
 - 2049+
 
-Uses the following structure for headers to represent each block
+Uses the following structure for headers to represent each block:
 ```c
 typedef struct header {
   int size;
@@ -47,7 +47,7 @@ starts at the appropriate free list (calculated by a size translation function).
 Once `custom_dealloc(void* memory)` is called the function first checks whether or not the block has already been freed. It gets the pointer for the memory block, marks it as free, and coalesces going strictly forward with the help of sentinels. It then inserts it back into the calculated free list.
 
 ## Constraints
-The design only coalesces forwards, this is to maintain simplicity and avoid overcomplicating the code as coalescing backwards would require more metadata like a footer structure or a pointer to the previous block. Forward coalescing can be done with strictly the block header structure. The program also does not use `munmap()`, rather the allocator retains the memory and just stores it in free lists for further use reducing the number of calls to `mmap()`. This also supports simplicity as using `munmap()` would require keeping track of mmap boundaries which is particularly difficult in this implementation.
+The design only coalesces forwards, this is to maintain simplicity and avoid overcomplicating the code as coalescing backwards would require more metadata like a footer structure or a pointer to the previous block. Forward coalescing can be done with strictly the block header structure. The program also does not use `munmap()`, rather the allocator retains the memory and just stores it in free lists for further use reducing the number of calls to `mmap()`. This also supports simplicity as using `munmap()` would require keeping track of `mmap()` boundaries which is particularly difficult in this implementation.
 
 ## Requirements
 - CMake 3.14 or newer
@@ -74,3 +74,7 @@ Run CTest from the build directory:
 ```bash
 ctest
 ```
+
+
+
+
