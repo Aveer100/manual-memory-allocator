@@ -17,7 +17,7 @@ Custom low level functions in C that manually emulate malloc and free with segre
 - Example:
 ``` void *ptr = custom_malloc(128, 1);  ```
 - The above returns a 128 byte block of memory found with the First Fit searching algorithm.
-  ``` void *custom_dealloc(void *); ```
+``` void *custom_dealloc(void *); ```
 - Call the above function on a pointer to a memory block and it will add the block back to the appropriate segregated free list.
 
 ## Design
