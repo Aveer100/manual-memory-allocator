@@ -61,7 +61,6 @@ cmake -S . -B build
 cmake --build build
 ```
 ## Test suite
-
 - Tests invalid allocation input
 - Tests double free
 - Tests Allocation and deallocation with read write
@@ -70,5 +69,9 @@ cmake --build build
 - Tests forward block coalescing
 - Tests ```mmap()```
 
+Run CTest from the build directory:
+```bash
+ctest
+```
 Run ctest from the build directory
 
