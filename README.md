@@ -4,7 +4,7 @@ Custom low level functions in C that manually emulate malloc and free with segre
 ## Features
 - Custom malloc and dealloc
 - Uses 3 searching algorithms; First Fit, Worst Fit, and Best Fit
-- uses segregated free lists to hold free blocks
+- Uses segregated free lists to hold free blocks
 - Includes block splitting
 - Coalesces forward for adjacent blocks
 - Uses mmap to request memory
@@ -56,9 +56,10 @@ The design only coalesces forwards, this is to maintain simplicity and avoid ove
 
 ## How to run
 - Clone the repository then run commands:
-- cmake -S . -B build
-- cmake --build build
-
+```bash
+cmake -S . -B build
+cmake --build build
+```
 ## Test suite
 
 - Tests invalid allocation input
