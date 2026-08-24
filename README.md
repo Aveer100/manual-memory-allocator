@@ -22,7 +22,7 @@ Custom low level functions in C that manually emulate malloc and free with segre
 - Call the above function on a pointer to a memory block and it will add the block back to the appropriate segregated free list.
 
 ## Design
-Free blocks are stored in 8 segregated free lists ranging from sizes
+Free blocks are stored in 8 segregated free lists ranging from sizes:
 - 1 - 32
 - 33 - 64
 - 65 - 128
@@ -64,7 +64,7 @@ cmake --build build
 ## Test suite
 - Tests invalid allocation input
 - Tests double free
-- Tests Allocation and deallocation with read write
+- Tests Allocation and deallocation with read/write
 - Tests block reuse
 - Tests all 3 searching algorithms
 - Tests forward block coalescing
@@ -74,8 +74,3 @@ Run CTest from the build directory:
 ```bash
 ctest
 ```
-
-
-
-
-
