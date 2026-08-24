@@ -12,15 +12,13 @@ Custom low level functions in C that manually emulate malloc and free with segre
 - Includes testing with CTest
 
 ## How to use
-void *custom_malloc(int size, int mode);
-call the above function with a size >= 1 and a mode (1 = First Fit, 2 = Worst Fit, 3 = Best Fit) and 
-the function will return a block of memory with your specifications.
-Example:
-void *ptr = custom_malloc(128, 1);  
-The above returns a 128 byte block of memory found with the First Fit searching algorithm.
-void *custom_dealloc(void *);
-Call the above function on a pointer to a memory block and it will add the block
-back to the appropriate segregated free list.
+- void *custom_malloc(int size, int mode);
+- call the above function with a size >= 1 and a mode (1 = First Fit, 2 = Worst Fit, 3 = Best Fit) and the function will return a block of memory with your specifications.
+- Example:
+- void *ptr = custom_malloc(128, 1);  
+- The above returns a 128 byte block of memory found with the First Fit searching algorithm.
+- void *custom_dealloc(void *);
+- Call the above function on a pointer to a memory block and it will add the block back to the appropriate segregated free list.
 
 ## Design
 - Free blocks are stored in 8 segregated free lists ranging from sizes
@@ -34,11 +32,11 @@ back to the appropriate segregated free list.
 - 2049+
 
 Uses the following structure for headers to represent each block
-typedef struct header {
-  int size;
-  struct header *next;
-  int allocated;
-} header;
+- typedef struct header {
+-  int size;
+-  struct header *next;
+-  int allocated;
+- } header;
 
 Once custom_malloc() is called the function checks for a valid size and mode before any work, the searching algorithm 
 starts at the appropriate free list (calculated by a size translation function). If the mode is 1 it will search for the first free block big enough and no further once it's found, if the mode is 2 it will search every block onwards to find the largest free block in the list. If the mode is 3 it will search every block in the lists onwards and choose the smallest free block that is large enough to hold the size. If necessary, the block is split with the user getting the amount they requested and the remainder back into the calculated free list for its size. If no block is found it will call mmap with either a small request (requested size + metadata less than 1024 bytes) where it maps a 1024 byte region (part of which is occupied by the header and sentinel) and is split accordingly, or a big request (greater than 1024 bytes) where mmap() maps memory of the size the user wants + its metadata, rounded up to the nearest full page.
