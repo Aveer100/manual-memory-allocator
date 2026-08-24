@@ -13,7 +13,7 @@ Custom low level functions in C that manually emulate malloc and free with segre
 
 ## How to use
 ``` void *custom_malloc(int size, int mode); ```
-- call the above function with a size >= 1 and a mode (1 = First Fit, 2 = Worst Fit, 3 = Best Fit) and the function will return a block of memory with your specifications.
+- Call the above function with a size >= 1 and a mode (1 = First Fit, 2 = Worst Fit, 3 = Best Fit) and the function will return a block of memory with your specifications.
 - Example:
 ``` void *ptr = custom_malloc(128, 1);  ```
 - The above returns a 128 byte block of memory found with the First Fit searching algorithm.
