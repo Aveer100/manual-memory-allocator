@@ -3,7 +3,7 @@ Custom low level functions in C that manually emulate malloc and free with segre
 
 ## Features
 - Custom malloc and dealloc
-- Uses 3 searching algorithms; first fit, worst fit, and best fit
+- Uses 3 searching algorithms; First Fit, Worst Fit, and Best Fit
 - uses segregated free lists to hold free blocks
 - Includes block splitting
 - Coalesces forward for adjacent blocks
