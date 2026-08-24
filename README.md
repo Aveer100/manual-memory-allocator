@@ -69,4 +69,3 @@ cmake --build build
 - Tests forward block coalescing
 - Tests ```mmap()```
 
-``
