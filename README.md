@@ -42,12 +42,12 @@ typedef struct header {
 ```
 
 Once ``` custom_malloc() ``` is called the function checks for a valid size and mode before any work, the searching algorithm 
-starts at the appropriate free list (calculated by a size translation function). If the mode is 1 it will search for the first free block big enough and no further once it's found, if the mode is 2 it will search every block onwards to find the largest free block in the list. If the mode is 3 it will search every block in the lists onwards and choose the smallest free block that is large enough to hold the size. If necessary, the block is split with the user getting the amount they requested and the remainder back into the calculated free list for its size. If no block is found it will call mmap with either a small request (requested size + metadata less than 1024 bytes) where it maps a 1024 byte region (part of which is occupied by the header and sentinel) and is split accordingly, or a big request (greater than 1024 bytes) where mmap() maps memory of the size the user wants + its metadata, rounded up to the nearest full page.
+starts at the appropriate free list (calculated by a size translation function). If the mode is 1 it will search for the first free block big enough and no further once it's found, if the mode is 2 it will search every block onwards to find the largest free block in the list. If the mode is 3 it will search every block in the lists onwards and choose the smallest free block that is large enough to hold the size. If necessary, the block is split with the user getting the amount they requested and the remainder back into the calculated free list for its size. If no block is found it will call ```mmap()``` with either a small request (requested size + metadata less than 1024 bytes) where it maps a 1024 byte region (part of which is occupied by the header and sentinel) and is split accordingly, or a big request (greater than 1024 bytes) where ```mmap()``` maps memory of the size the user wants + its metadata, rounded up to the nearest full page.
 
 Once ``` custom_dealloc(void* memory) ``` is called the function first checks whether or not the block has already been freed. It gets the pointer for the memory block, marks it as free, and coalesces going strictly forward with the help of sentinels. It then inserts it back into the calculated free list.
 
 ## Constraints
-The design only coalesces forwards, this is to maintain simplicity and avoid overcomplicating the code as coalescing backwards would require more metadata like a footer structure or a pointer to the previous block. Forward coalescing can be done with strictly the block header structure. The program also does not use munmap(), rather the allocator retains the memory and just stores it in free lists for further use reducing the number of calls to mmap. This also supports simplicity as using munmap() would require keeping track of mmap boundaries which is particularly difficult in this implementation.
+The design only coalesces forwards, this is to maintain simplicity and avoid overcomplicating the code as coalescing backwards would require more metadata like a footer structure or a pointer to the previous block. Forward coalescing can be done with strictly the block header structure. The program also does not use ```munmap()```, rather the allocator retains the memory and just stores it in free lists for further use reducing the number of calls to mmap. This also supports simplicity as using ```munmap()``` would require keeping track of mmap boundaries which is particularly difficult in this implementation.
 
 ## Requirements
 - CMake 3.14 or newer
@@ -67,7 +67,7 @@ The design only coalesces forwards, this is to maintain simplicity and avoid ove
 - Tests block reuse
 - Tests all 3 searching algorithms
 - Tests forward block coalescing
-- Tests mmap
+- Tests ```mmap()```
 
 Run ctest from the build directory
 
