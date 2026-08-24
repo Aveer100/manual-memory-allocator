@@ -69,8 +69,4 @@ cmake --build build
 - Tests forward block coalescing
 - Tests ```mmap()```
 
-Run CTest from the build directory:
-```bash
-ctest
-```
-Run ctest from the build directory
+``
