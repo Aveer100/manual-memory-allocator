@@ -1,10 +1,10 @@
-Start testing: Aug 22 12:23 PDT
+Start testing: Aug 24 13:54 PDT
 ----------------------------------------------------------
 1/1 Testing: AllocatorUnitTests
 1/1 Test: AllocatorUnitTests
 Command: "/Users/aveerseikhon/memory-allocator/manual-memory-allocator/build/testCases"
 Directory: /Users/aveerseikhon/memory-allocator/manual-memory-allocator/build
-"AllocatorUnitTests" start time: Aug 22 12:23 PDT
+"AllocatorUnitTests" start time: Aug 24 13:54 PDT
 Output:
 ----------------------------------------------------------
 Test 1: Taboo Inputs
@@ -29,11 +29,11 @@ Test 7: Double Free Guard
 Test Passed
 
 <end of output>
-Test time =   0.60 sec
+Test time =   0.17 sec
 ----------------------------------------------------------
 Test Passed.
-"AllocatorUnitTests" end time: Aug 22 12:23 PDT
+"AllocatorUnitTests" end time: Aug 24 13:54 PDT
 "AllocatorUnitTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 22 12:23 PDT
+End testing: Aug 24 13:54 PDT

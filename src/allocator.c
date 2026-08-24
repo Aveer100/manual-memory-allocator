@@ -32,7 +32,10 @@ void *custom_malloc(int amount, int mode) {
   if (amount <= 0) {
     return NULL;
   }
-  // Align to 8 bits and initialize pointers
+  if (mode != 1 && mode != 2 && mode != 3) {
+    return NULL;
+  }
+  //  Align to 8 bytes and initialize pointers
   amount = (amount + 7) & ~7;
   int listNum = translate(amount);
   header *prev = NULL;

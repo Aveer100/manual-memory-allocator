@@ -10,6 +10,6 @@ typedef struct header {
   int allocated;
 } header;
 
-void *custom_malloc(int, int);
+void *custom_malloc(int size, int mode);
 
-void *custom_dealloc(void *);
+void *custom_dealloc(void *memory);
