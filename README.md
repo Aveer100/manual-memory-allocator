@@ -60,6 +60,7 @@ The design only coalesces forwards, this is to maintain simplicity and avoid ove
 cmake -S . -B build
 cmake --build build
 ```
+
 ## Test suite
 - Tests invalid allocation input
 - Tests double free
@@ -68,4 +69,13 @@ cmake --build build
 - Tests all 3 searching algorithms
 - Tests forward block coalescing
 - Tests ```mmap()```
+
+Run CTest from the build directory:
+```bash
+ctest
+```
+
+
+
+
 
