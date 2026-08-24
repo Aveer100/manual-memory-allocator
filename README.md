@@ -2,14 +2,14 @@
 Custom low level functions in C that manually emulate malloc and free with segregated free lists.
 
 ## Features
-Custom malloc and dealloc
-Uses 3 searching algorithms; first fit, worst fit, and best fit
-Uses segregated free lists to hold free blocks
-Includes block splitting
-Coalesces forward for adjacent blocks
-Uses mmap to request memory
-Checks for invalid input
-Includes testing with CTest
+- Custom malloc and dealloc
+- Uses 3 searching algorithms; first fit, worst fit, and best fit
+- uses segregated free lists to hold free blocks
+- Includes block splitting
+- Coalesces forward for adjacent blocks
+- Uses mmap to request memory
+- Checks for invalid input
+- Includes testing with CTest
 
 ## How to use
 void *custom_malloc(int size, int mode);
@@ -23,15 +23,15 @@ Call the above function on a pointer to a memory block and it will add the block
 back to the appropriate segregated free list.
 
 ## Design
-Free blocks are stored in 8 segregated free lists ranging from sizes
-1 - 32
-33 - 64
-65 - 128
-129 - 256
-257 - 512
-513 - 1024
-1025 - 2048
-2049+
+- Free blocks are stored in 8 segregated free lists ranging from sizes
+- 1 - 32
+- 33 - 64
+- 65 - 128
+- 129 - 256
+- 257 - 512
+- 513 - 1024
+- 1025 - 2048
+- 2049+
 
 Uses the following structure for headers to represent each block
 typedef struct header {
@@ -49,24 +49,24 @@ Once custom_dealloc(void* memory) is called the function first checks whether or
 The design only coalesces forwards, this is to maintain simplicity and avoid overcomplicating the code as coalescing backwards would require more metadata like a footer structure or a pointer to the previous block. Forward coalescing can be done with strictly the block header structure. The program also does not use munmap(), rather the allocator retains the memory and just stores it in free lists for further use reducing the number of calls to mmap. This also supports simplicity as using munmap() would require keeping track of mmap boundaries which is particularly difficult in this implementation.
 
 ## Requirements
-CMake 3.14 or newer
-C compiler
-Unix-like environment with `mmap` support
+- CMake 3.14 or newer
+- C compiler
+- Unix-like environment with `mmap` support
 
 ## How to run
-Clone the repository then run commands:
-cmake -S . -B build
-cmake --build build
+- Clone the repository then run commands:
+- cmake -S . -B build
+- cmake --build build
 
 ## Test suite
 
-Tests invalid allocation input
-Tests double free
-Tests Allocation and deallocation with read write
-Tests block reuse
-Tests all 3 searching algorithms
-Tests forward block coalescing
-Tests mmap
+- Tests invalid allocation input
+- Tests double free
+- Tests Allocation and deallocation with read write
+- Tests block reuse
+- Tests all 3 searching algorithms
+- Tests forward block coalescing
+- Tests mmap
 
 Run ctest from the build directory
 
