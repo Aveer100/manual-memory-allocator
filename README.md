@@ -1,5 +1,5 @@
 # manual-memory-allocator
-Custom low level functions in C that manually emulate malloc and free with segregated free lists.
+Custom low-level memory allocation functions in C based on segregated free lists, mmap, forward coalescing, and block splitting
 
 ## Features
 - Custom malloc and dealloc
